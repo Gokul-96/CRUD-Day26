@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { useNavigate, useParams } from 'react-router-dom';
 
 const EditUser = ({ users }) => {
@@ -24,6 +25,8 @@ const EditUser = ({ users }) => {
     // Update the user in the array
     const updatedUsers = users.map((u) => (u.id === parseInt(userId) ? updatedUser : u));
     // Update the users array using a state management solution in a real app
+
+    users = updatedUsers;
 
     // Navigate back to the user's profile
     navigate(`/profile/${userId}`);
